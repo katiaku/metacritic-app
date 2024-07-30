@@ -1,4 +1,10 @@
-import { FlatList, View, ActivityIndicator } from "react-native";
+import {
+  FlatList,
+  View,
+  ActivityIndicator,
+  Text,
+  Pressable,
+} from "react-native";
 import { getLatestGames } from "../lib/metacritic";
 import { useState, useEffect } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -21,8 +27,10 @@ export function Main() {
       <View style={{ marginBottom: 20 }}>
         <Logo />
       </View>
-      <Link href="/about" className="text-blue-400 text-xl">
-        Go To About
+      <Link asChild href="/about">
+        <Pressable>
+          <Text className="text-blue-400 text-xl mt-24">Go To About</Text>
+        </Pressable>
       </Link>
       {games.length === 0 ? (
         <ActivityIndicator color={"#fff"} size={"large"} />
