@@ -1,24 +1,33 @@
 import { Text, View } from "react-native";
-import { Link, useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams, Stack } from "expo-router";
+import { Screen } from "../components/Screen";
 
 export default function Detail() {
   const { slug } = useLocalSearchParams();
 
   return (
-    <View className="flex-1 justify-center items-center">
+    <Screen>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: "#ffee00" },
+          headerTintColor: "black",
+          headerLeft: () => { },
+          headerTitle: "Game Details",
+          headerRight: () => { },
+        }}
+      />
       <View>
         <Text className="text-white font-bold mb-8 text-2xl">
-          Game Details:{" "}
           {slug
             .replace(/-/g, " ")
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ")}
         </Text>
-        <Link href="/" className="text-blue-500">
+        {/* <Link href="/" className="text-blue-500">
           Go Back
-        </Link>
+        </Link> */}
       </View>
-    </View>
+    </Screen>
   );
 }
