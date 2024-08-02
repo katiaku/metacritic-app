@@ -28,14 +28,17 @@ export function Main() {
 
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <View style={{ marginBottom: 20 }}>
-        <Logo />
+      <View className="flex-row justify-between items-center mb-4 mx-2">
+        <View>
+          <Logo />
+        </View>
+        <Link asChild href="/about">
+          <StyledPressable className={`active:opacity-50`}>
+            <InfoCircleIcon />
+          </StyledPressable>
+        </Link>
       </View>
-      <Link asChild href="/about">
-        <StyledPressable className={`active:opacity-50`}>
-          <InfoCircleIcon />
-        </StyledPressable>
-      </Link>
+
       {games.length === 0 ? (
         <ActivityIndicator color={"#fff"} size={"large"} />
       ) : (

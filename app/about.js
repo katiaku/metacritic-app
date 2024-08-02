@@ -1,4 +1,4 @@
-import { Pressable, ScrollView, Text } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import { Link } from "expo-router";
 import { HomeIcon } from "../components/Icons";
 import { styled } from "nativewind";
@@ -7,13 +7,15 @@ const StyledPressable = styled(Pressable);
 
 export default function About() {
   return (
-    <ScrollView className="pt-24">
-      <Link asChild href="/">
-        <StyledPressable className={`active:opacity-50`}>
-          <HomeIcon />
-        </StyledPressable>
-      </Link>
-      <Text className="text-white font-bold mt-8 mb-8 text-2xl">About</Text>
+    <ScrollView className="pt-20">
+      <View className="flex-row-reverse justify-between items-center mb-4 mx-2">
+        <Link asChild href="/">
+          <StyledPressable className={`active:opacity-50`}>
+            <HomeIcon />
+          </StyledPressable>
+        </Link>
+        <Text className="text-white font-bold mt-8 mb-8 text-2xl">About</Text>
+      </View>
       <Text className="text-white/90 mb-4">
         The Metacritic Game Rating App is a comprehensive tool designed for
         gaming enthusiasts who want to stay updated on the latest and greatest
