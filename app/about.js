@@ -1,10 +1,6 @@
-import { Pressable, ScrollView, Text, View } from "react-native";
-import { Link, Stack } from "expo-router";
-import { HomeIcon } from "../components/Icons";
-import { styled } from "nativewind";
+import { ScrollView, Text } from "react-native";
+import { Stack } from "expo-router";
 import { Screen } from "../components/Screen";
-
-const StyledPressable = styled(Pressable);
 
 export default function About() {
   return (
@@ -13,21 +9,15 @@ export default function About() {
         options={{
           headerStyle: { backgroundColor: "#ffee00" },
           headerTintColor: "black",
+          // eslint-disable-next-line prettier/prettier
           headerLeft: () => { },
           headerTitle: "About",
+          // eslint-disable-next-line prettier/prettier
           headerRight: () => { },
         }}
       />
-      <ScrollView>
-        {/* <View className="flex-row-reverse justify-between items-center mb-4 mx-2">
-          <Link asChild href="/">
-            <StyledPressable className={`active:opacity-50`}>
-              <HomeIcon />
-            </StyledPressable>
-          </Link>
-          <Text className="text-white font-bold mt-8 mb-8 text-2xl">About</Text>
-        </View> */}
-        <Text className="text-white/90 mb-4">
+      <ScrollView className="p-2">
+        <Text className="text-white/90 mb-4 text-base">
           The Metacritic Game Rating App is a comprehensive tool designed for
           gaming enthusiasts who want to stay updated on the latest and greatest
           video games. This app aggregates reviews from critics and users alike,
@@ -39,7 +29,7 @@ export default function About() {
           critically acclaimed games, helping you make informed decisions about
           what to play next.
         </Text>
-        <Text className="text-white/90 mb-4">
+        <Text className="text-white/90 mb-4 text-base">
           The Metacritic Game Rating App is a comprehensive tool designed for
           gaming enthusiasts who want to stay updated on the latest and greatest
           video games. This app aggregates reviews from critics and users alike,
@@ -51,7 +41,7 @@ export default function About() {
           critically acclaimed games, helping you make informed decisions about
           what to play next.
         </Text>
-        <Text className="text-white/90 mb-4">
+        <Text className="text-white/90 mb-4 text-base">
           Moreover, the Metacritic Game Rating App is completely free, making it
           an accessible resource for all gamers. Unlike other platforms that may
           require subscriptions or purchases to access detailed reviews and
