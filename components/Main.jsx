@@ -5,8 +5,6 @@ import { AnimatedGameCard } from "./GameCard";
 import { styled } from "nativewind";
 import { Screen } from "./Screen";
 
-const StyledPressable = styled(Pressable);
-
 export function Main() {
   const [games, setGames] = useState([]);
 

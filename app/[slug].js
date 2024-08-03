@@ -21,8 +21,10 @@ export default function Detail() {
         options={{
           headerStyle: { backgroundColor: "#ffee00" },
           headerTintColor: "black",
+          // eslint-disable-next-line prettier/prettier
           headerLeft: () => { },
           headerTitle: "Game Details",
+          // eslint-disable-next-line prettier/prettier
           headerRight: () => { },
         }}
       />
@@ -33,7 +35,7 @@ export default function Detail() {
           <ScrollView>
             <View className="justify-center items-center text-center">
               <Image
-                className="mb-4 rounded"
+                className="mt-2 mb-4 rounded"
                 source={{ uri: gameInfo.img }}
                 style={{ width: 214, height: 294 }}
               />

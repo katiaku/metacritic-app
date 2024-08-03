@@ -12,13 +12,13 @@ export default function Layout() {
           headerTintColor: "white",
           headerTitle: "",
           headerLeft: () => <Logo />,
-          headerRight: () => (
-            <Link asChild href="/about">
-              <Pressable>
-                <InfoCircleIcon />
-              </Pressable>
-            </Link>
-          ),
+          // headerRight: () => (
+          //   <Link asChild href="/about">
+          //     <Pressable>
+          //       <InfoCircleIcon />
+          //     </Pressable>
+          //   </Link>
+          // ),
         }}
       />
     </View>
